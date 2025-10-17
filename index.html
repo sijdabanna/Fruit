@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh vs Contaminated Fruits - Health Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Alata', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+        
+        .intro {
+            padding: 30px;
+            background: #f8f9fa;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .intro h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .fruit-section {
+            padding: 40px 30px;
+            border-bottom: 2px solid #e9ecef;
+        }
+        
+        .fruit-section:last-child {
+            border-bottom: none;
+        }
+        
+        .fruit-section h2 {
+            color: #667eea;
+            margin-bottom: 25px;
+            font-size: 2em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 25px;
+        }
+        
+        .fruit-card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .fruit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .fresh {
+            border: 3px solid #28a745;
+        }
+        
+        .contaminated {
+            border: 3px solid #dc3545;
+        }
+        
+        .fruit-card h3 {
+            padding: 15px;
+            color: white;
+            text-align: center;
+            font-size: 1.3em;
+        }
+        
+        .fresh h3 {
+            background: #28a745;
+        }
+        
+        .contaminated h3 {
+            background: #dc3545;
+        }
+        
+        .fruit-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .info-box {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .info-box h4 {
+            color: #856404;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        .info-box ul {
+            margin-left: 20px;
+            color: #856404;
+        }
+        
+        .info-box ul li {
+            margin: 8px 0;
+        }
+        
+        .prevention-box {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .prevention-box h4 {
+            color: #155724;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        .prevention-box ul {
+            margin-left: 20px;
+            color: #155724;
+        }
+        
+        .prevention-box ul li {
+            margin: 8px 0;
+        }
+        
+        footer {
+            background: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .comparison {
+                grid-template-columns: 1fr;
+            }
+            
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            .fruit-section h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍎 Fresh vs Contaminated Fruits 🍊</h1>
+            <p>Your Guide to Identifying and Preventing Fruit Contamination</p>
+        </header>
+        
+        <div class="intro">
+            <h2>Why This Matters</h2>
+            <p>Eating contaminated fruits can lead to serious health issues including food poisoning, digestive problems, and infections. Learning to identify fresh fruits and properly handle them is essential for your health and wellbeing.</p>
+        </div>
+        
+        <!-- Apple Section -->
+        <div class="fruit-section">
+            <h2>🍎 Apples</h2>
+            <div class="comparison">
+                <div class="fruit-card fresh">
+                    <h3>Fresh Apple</h3>
+                    <img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=600" alt="Fresh red apples">
+                </div>
+                <div class="fruit-card contaminated">
+                    <h3>Contaminated Apple</h3>
+                    <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=600" alt="Moldy rotten apple">
+                </div>
+            </div>
+            
+            <div class="info-box">
+                <h4>⚠️ Health Risks of Contaminated Apples</h4>
+                <ul>
+                    <li><strong>Mold toxins (mycotoxins)</strong> can cause allergic reactions and respiratory problems</li>
+                    <li><strong>Bacterial contamination</strong> may lead to food poisoning with symptoms like nausea and diarrhea</li>
+                    <li><strong>Patulin</strong> - a toxin found in rotting apples that can damage the immune system</li>
+                    <li>Pesticide residue accumulation if not properly washed</li>
+                </ul>
+            </div>
+            
+            <div class="prevention-box">
+                <h4>✅ How to Prevent & Remove Contamination</h4>
+                <ul>
+                    <li>Wash apples under running water and scrub gently with a produce brush</li>
+                    <li>Store in the refrigerator's crisper drawer to slow spoilage</li>
+                    <li>Inspect for soft spots, bruises, or mold before purchasing</li>
+                    <li>Remove any damaged apples from storage to prevent spreading</li>
+                    <li>Use a vinegar solution (1:3 vinegar to water) for deeper cleaning</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Strawberry Section -->
+        <div class="fruit-section">
+            <h2>🍓 Strawberries</h2>
+            <div class="comparison">
+                <div class="fruit-card fresh">
+                    <h3>Fresh Strawberries</h3>
+                    <img src="https://images.unsplash.com/photo-1543528176-61b239494933?w=600" alt="Fresh strawberries">
+                </div>
+                <div class="fruit-card contaminated">
+                    <h3>Contaminated Strawberries</h3>
+                    <img src="https://images.unsplash.com/photo-1584441038650-1e5f9b1b6cb7?w=600" alt="Moldy strawberries">
+                </div>
+            </div>
+            
+            <div class="info-box">
+                <h4>⚠️ Health Risks of Contaminated Strawberries</h4>
+                <ul>
+                    <li><strong>Gray mold (Botrytis)</strong> produces allergens and respiratory irritants</li>
+                    <li><strong>E. coli and Salmonella</strong> contamination from soil or water can cause severe illness</li>
+                    <li><strong>Hepatitis A virus</strong> transmission risk from contaminated berries</li>
+                    <li>High pesticide residue as strawberries are often heavily treated</li>
+                </ul>
+            </div>
+            
+            <div class="prevention-box">
+                <h4>✅ How to Prevent & Remove Contamination</h4>
+                <ul>
+                    <li>Don't wash until ready to eat - moisture promotes mold growth</li>
+                    <li>Rinse thoroughly under cold water just before consumption</li>
+                    <li>Remove moldy berries immediately to prevent spread</li>
+                    <li>Store in breathable containers lined with paper towels</li>
+                    <li>Keep refrigerated at 32-36°F and consume within 3-5 days</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Orange Section -->
+        <div class="fruit-section">
+            <h2>🍊 Oranges</h2>
+            <div class="comparison">
+                <div class="fruit-card fresh">
+                    <h3>Fresh Oranges</h3>
+                    <img src="https://images.unsplash.com/photo-1547514701-42782101795e?w=600" alt="Fresh oranges">
+                </div>
+                <div class="fruit-card contaminated">
+                    <h3>Contaminated Oranges</h3>
+                    <img src="https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?w=600" alt="Moldy oranges">
+                </div>
+            </div>
+            
+            <div class="info-box">
+                <h4>⚠️ Health Risks of Contaminated Oranges</h4>
+                <ul>
+                    <li><strong>Penicillium mold</strong> causes the characteristic blue-green growth and produces harmful mycotoxins</li>
+                    <li><strong>Bacterial infections</strong> can penetrate the fruit through damaged peel</li>
+                    <li><strong>Aflatoxins</strong> from certain molds are carcinogenic</li>
+                    <li>Fermentation from overripe fruit can cause stomach upset</li>
+                </ul>
+            </div>
+            
+            <div class="prevention-box">
+                <h4>✅ How to Prevent & Remove Contamination</h4>
+                <ul>
+                    <li>Wash the peel even though you don't eat it - bacteria transfer to hands and flesh</li>
+                    <li>Store at room temperature if eating within a week, refrigerate for longer storage</li>
+                    <li>Check for soft spots and white/green fuzzy mold before use</li>
+                    <li>Dry oranges after washing to prevent moisture buildup</li>
+                    <li>Separate damaged oranges from fresh ones immediately</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Banana Section -->
+        <div class="fruit-section">
+            <h2>🍌 Bananas</h2>
+            <div class="comparison">
+                <div class="fruit-card fresh">
+                    <h3>Fresh Bananas</h3>
+                    <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=600" alt="Fresh yellow bananas">
+                </div>
+                <div class="fruit-card contaminated">
+                    <h3>Contaminated Bananas</h3>
+                    <img src="https://images.unsplash.com/photo-1603833797131-3c0a8e34d1a1?w=600" alt="Overripe black bananas">
+                </div>
+            </div>
+            
+            <div class="info-box">
+                <h4>⚠️ Health Risks of Contaminated Bananas</h4>
+                <ul>
+                    <li><strong>Fruit flies and insects</strong> attracted to overripe bananas can spread bacteria</li>
+                    <li><strong>Black mold</strong> on the peel can indicate internal spoilage</li>
+                    <li><strong>Excessive fermentation</strong> produces alcohol that can cause digestive issues</li>
+                    <li>Stem-end rot can harbor harmful fungi and bacteria</li>
+                </ul>
+            </div>
+            
+            <div class="prevention-box">
+                <h4>✅ How to Prevent & Remove Contamination</h4>
+                <ul>
+                    <li>Rinse bananas when you bring them home to remove surface contaminants</li>
+                    <li>Separate bananas from the bunch to slow ripening</li>
+                    <li>Store at room temperature; refrigerate only when fully ripe</li>
+                    <li>Wrap stems in plastic wrap to extend freshness</li>
+                    <li>Discard if you see black mold or if flesh is completely brown</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Grapes Section -->
+        <div class="fruit-section">
+            <h2>🍇 Grapes</h2>
+            <div class="comparison">
+                <div class="fruit-card fresh">
+                    <h3>Fresh Grapes</h3>
+                    <img src="https://images.unsplash.com/photo-1599819177086-95d1d4a9e813?w=600" alt="Fresh purple grapes">
+                </div>
+                <div class="fruit-card contaminated">
+                    <h3>Contaminated Grapes</h3>
+                    <img src="https://images.unsplash.com/photo-1609710461377-295ac2f5be7e?w=600" alt="Moldy grapes">
+                </div>
+            </div>
+            
+            <div class="info-box">
+                <h4>⚠️ Health Risks of Contaminated Grapes</h4>
+                <ul>
+                    <li><strong>Powdery white mold</strong> can trigger allergic reactions and asthma</li>
+                    <li><strong>Bacterial contamination</strong> from handling can cause foodborne illness</li>
+                    <li><strong>Pesticide residue</strong> - grapes often rank high on contaminated produce lists</li>
+                    <li>Soft, leaking grapes harbor bacterial growth</li>
+                </ul>
+            </div>
+            
+            <div class="prevention-box">
+                <h4>✅ How to Prevent & Remove Contamination</h4>
+                <ul>
+                    <li>Rinse thoroughly under running water just before eating</li>
+                    <li>Soak in baking soda solution (1 tsp per 2 cups water) for 10-15 minutes</li>
+                    <li>Store unwashed in a perforated plastic bag in the refrigerator</li>
+                    <li>Remove any shriveled or moldy grapes from the bunch immediately</li>
+                    <li>Pat dry after washing to prevent moisture-related spoilage</li>
+                </ul>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2024 Fruit Safety Guide | Stay Healthy, Eat Fresh! 🍎🍊🍌🍓🍇</p>
+        </footer>
+    </div>
+</body>
+</html>
